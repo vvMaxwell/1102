@@ -10,3 +10,8 @@ for count in range(start, max(numList)):
     print(count)
     if count not in numList:
         print(f"{count} is missing")
+with open("sorted_numbers.txt", "w") as fileDescriptor:
+    for count in range(start, max(numList)):
+        print(count)
+        if count not in numList:
+            fileDescriptor.write(f"{count} is missing ")
